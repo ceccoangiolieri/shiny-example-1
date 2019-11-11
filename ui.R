@@ -1,8 +1,8 @@
 library(shiny)
 
-# Define UI for application that plots random distributions 
-shinyUI(pageWithSidebar(
-
+# Define UI for data upload app ----
+ui <- fluidPage(
+  
   # App title ----
   titlePanel("Uploading Files"),
   
@@ -26,4 +26,4 @@ shinyUI(pageWithSidebar(
       
     )
   )
-))
+)
