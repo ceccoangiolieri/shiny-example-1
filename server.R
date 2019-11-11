@@ -1,9 +1,7 @@
 library(shiny)
 
-# Define server logic required to generate and plot a random distribution
-shinyServer(function(input, output) {
-
-  # Define server logic to read selected file ----
+# Define server logic to read selected file ----
+server <- function(input, output, session) {
   options(shiny.maxRequestSize=1000*1024^2)
   eventlog <- reactive({
     
@@ -63,5 +61,4 @@ shinyServer(function(input, output) {
   
   
   
-
-})
+}
