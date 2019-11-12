@@ -1,14 +1,7 @@
 
 
 # Define server logic to read selected file ----
-server <- function(input, output) { 
-  library(shiny)
-library(shinydashboard)
-library(bupaR)
-library(edeaR)
-library(eventdataR)
-library(processmapR)
-library(ggplot2)
+server <- function(input, output) {
   
   options(shiny.maxRequestSize=1000*1024^2)
   eventlog <- reactive({
