@@ -1,7 +1,7 @@
 library(shiny)
 
 # Define server logic to read selected file ----
-server <- function(input, output, session) {
+shinyServer(function(input, output, session) {
   options(shiny.maxRequestSize=1000*1024^2)
   eventlog <- reactive({
     
