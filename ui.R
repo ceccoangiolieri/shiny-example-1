@@ -1,16 +1,11 @@
 library(shiny)
 
-# Define UI for data upload app ----
-ui <- fluidPage(
-  
-  # App title ----
-  titlePanel("Uploading Files"),
-  
-  # Sidebar layout with input and output definitions ----
-  sidebarLayout(
-    
-    # Sidebar panel for inputs ----
+shinyUI(
+  pageWithSidebar(
+    headerPanel('Iris k-means clustering'),
+   
     sidebarPanel(
+     
       
       # Input: Select a file ----
       fileInput("file1", "Choose CSV File",
