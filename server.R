@@ -5,7 +5,7 @@ server <- function(input, output) {
   
   options(shiny.maxRequestSize=1000*1024^2)
   eventlog <- reactive({
-    
+   req(input$file1$datapath)
     
     
     # input$file1 will be NULL initially. After the user selects
