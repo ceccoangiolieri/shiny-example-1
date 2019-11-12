@@ -12,7 +12,8 @@ my_packages = c(
   'shiny',
   'shinydashboard',
   'shinyEventLogger',
-  'dplyr'
+  'dplyr',
+  'mongolite'
 )
 install_if_missing = function(p) {
   if (p %in% rownames(installed.packages()) == FALSE) {
