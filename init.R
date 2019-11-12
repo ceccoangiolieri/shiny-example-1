@@ -8,7 +8,11 @@ my_packages = c(
   'DiagrammeR',
   'ggplot2',
   'stringr',
-  'lubridate'  
+  'lubridate',
+  'shiny',
+  'shinydashboard',
+  'shinyEventLogger',
+  'dplyr'
 )
 install_if_missing = function(p) {
   if (p %in% rownames(installed.packages()) == FALSE) {
