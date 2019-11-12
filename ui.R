@@ -1,11 +1,13 @@
-library(shiny)
-
-shinyUI(
-  pageWithSidebar(
-    headerPanel('Iris k-means clustering'),
-   
+ui <- fluidPage(
+  
+  # App title ----
+  titlePanel("Uploading Files"),
+  
+  # Sidebar layout with input and output definitions ----
+  sidebarLayout(
+    
+    # Sidebar panel for inputs ----
     sidebarPanel(
-     
       
       # Input: Select a file ----
       fileInput("file1", "Choose CSV File",
