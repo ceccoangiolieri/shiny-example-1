@@ -1,12 +1,8 @@
-
-
-# Define server logic to read selected file ----
-server <- function(input, output) {
-  
+server <- function(input, output, session) {
   options(shiny.maxRequestSize=1000*1024^2)
   eventlog <- reactive({
-   req(input$file1$datapath)
     
+    req(input$file1$datapath)
     
     # input$file1 will be NULL initially. After the user selects
     # and uploads a file, head of that data file by default,
@@ -52,9 +48,9 @@ server <- function(input, output) {
       renderGrViz({
         
         eventlog() %>%
+          filter_activity_frequency(percentage = 1.0) %>% # show only most frequent activities
+          filter_trace_frequency(percentage = .80) %>%  
           processmapR::process_map()
-        
-        
         
       })
     )
