@@ -1,13 +1,4 @@
-library(shiny)
-library(shinydashboard)
-library(shinyEventLogger)
-library(dplyr)
-library(DiagrammeR)
-library(bupaR)
-library(edeaR)
-library(eventdataR)
-library(processmapR)
-library(ggplot2)
+
 server <- function(input, output, session) {
   
   options(shiny.maxRequestSize=1000*1024^2)
