@@ -9,8 +9,6 @@ my_packages = c(
   'ggplot2',
   'stringr',
   'lubridate',
-  'shiny',
-  'shinydashboard',
   'shinyEventLogger',
   'dplyr',
   'mongolite'
