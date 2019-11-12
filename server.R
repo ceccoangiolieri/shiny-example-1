@@ -45,14 +45,14 @@ server <- function(input, output, session) {
     tagList(
       
       
-      renderGrViz({
+      
         
         eventlog() %>%
           filter_activity_frequency(percentage = 1.0) %>% # show only most frequent activities
           filter_trace_frequency(percentage = .80) %>%  
           processmapR::process_map()
         
-      })
+      
     )
   })
   
