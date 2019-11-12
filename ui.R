@@ -1,8 +1,11 @@
-library(shiny)
-
-shinyUI(
-  pageWithSidebar(
-    headerPanel('Iris k-means clustering'),
+# Define UI for data upload app ----
+ui <- fluidPage(
+  
+  # App title ----
+  titlePanel("Uploading Files"),
+  
+  # Sidebar layout with input and output definitions ----
+  sidebarLayout(
     
     # Sidebar panel for inputs ----
     sidebarPanel(
@@ -17,7 +20,7 @@ shinyUI(
     ),
     mainPanel (
       tabPanel(title = "Process map",
-               uiOutput("process_map"))
+               br(), uiOutput("process_map"))
       
     )
   )
