@@ -1,4 +1,14 @@
 server <- function(input, output, session) {
+  library(shiny)
+library(shinydashboard)
+library(shinyEventLogger)
+library(dplyr)
+library(DiagrammeR)
+library(bupaR)
+library(edeaR)
+library(eventdataR)
+library(processmapR)
+library(ggplot2)
   options(shiny.maxRequestSize=1000*1024^2)
   eventlog <- reactive({
     
