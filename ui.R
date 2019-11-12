@@ -1,12 +1,8 @@
 library(shiny)
 
-ui <- fluidPage(
-  
-  # App title ----
-  titlePanel("Uploading Files"),
-  
-  # Sidebar layout with input and output definitions ----
-  sidebarLayout(
+shinyUI(
+  pageWithSidebar(
+    headerPanel('Iris k-means clustering'),
     
     # Sidebar panel for inputs ----
     sidebarPanel(
